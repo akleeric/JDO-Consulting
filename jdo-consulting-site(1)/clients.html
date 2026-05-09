@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nos partenaires — JDO Consulting</title>
+  <meta name="description" content="19 références confirmées — JDO Consulting accompagne des organisations publiques et privées exigeantes.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+  <style>
+    .clients-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 16px;
+    }
+    .client-card {
+      background: var(--white);
+      border: 0.5px solid var(--gray-200);
+      border-radius: var(--radius-lg);
+      padding: 28px 20px;
+      text-align: center;
+      transition: box-shadow .2s, transform .2s;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+    .client-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+    .client-logo-placeholder {
+      width: 80px; height: 48px;
+      background: var(--off);
+      border: 0.5px solid var(--gray-200);
+      border-radius: 6px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 9px; color: var(--gray-400); font-style: italic; text-align: center; padding: 4px;
+    }
+    .client-name { font-family: var(--font-display); font-weight: 600; font-size: 13px; color: var(--navy); line-height: 1.3; }
+    .client-sector { font-size: 10px; background: var(--sky-pale); color: #0369A1; padding: 3px 8px; border-radius: 100px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.5px; }
+    .client-card[data-sector="energie"] .client-sector { background: #FEF9C3; color: #A16207; }
+    .client-card[data-sector="collectivites"] .client-sector { background: #F0FDF4; color: #15803D; }
+    .client-card[data-sector="industrie"] .client-sector { background: #FFF7ED; color: #C2410C; }
+    .client-card[data-sector="sante"] .client-sector { background: #FDF2F8; color: #9D174D; }
+    .client-card[data-sector="services"] .client-sector { background: var(--sky-pale); color: #0369A1; }
+    .client-card.hidden { display: none; }
+    .count-badge { font-size: 13px; color: var(--gray-600); font-weight: 300; margin-bottom: 32px; }
+    .count-badge strong { color: var(--navy); font-weight: 600; }
+    @media (max-width: 768px) {
+      .clients-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-logo">
+      <div class="nav-logo-ring"><i class="ti ti-atom" aria-hidden="true"></i></div>
+      <span class="nav-brand">JDO <em>Consulting</em></span>
+    </div>
+    <div class="nav-links">
+      <a href="index.html">Accueil</a>
+      <a href="identite.html">Notre identité</a>
+      <a href="offre.html">Notre offre</a>
+      <a href="clients.html" class="active">Nos partenaires</a>
+      <a href="index.html#contact" class="nav-cta">Nous contacter</a>
+    </div>
+  </nav>
+
+  <div class="page-header">
+    <p class="breadcrumb"><a href="index.html">Accueil</a> / <span>Nos partenaires</span></p>
+    <h1>Nos partenaires</h1>
+    <p>19 références confirmées dans des secteurs exigeants.</p>
+  </div>
+
+  <section class="section section-off">
+    <p class="eyebrow">Références</p>
+    <h2 class="section-title">Ils nous font confiance</h2>
+
+    <div class="filter-bar" id="filterBar">
+      <button class="filter-pill active" data-filter="all">Tous (19)</button>
+      <button class="filter-pill" data-filter="energie">Énergie</button>
+      <button class="filter-pill" data-filter="collectivites">Collectivités</button>
+      <button class="filter-pill" data-filter="sante">Santé</button>
+      <button class="filter-pill" data-filter="industrie">Industrie</button>
+      <button class="filter-pill" data-filter="services">Services</button>
+    </div>
+
+    <p class="count-badge"><strong id="visibleCount">19</strong> références affichées</p>
+
+    <div class="clients-grid" id="clientsGrid">
+
+      <div class="client-card" data-sector="energie">
+        <div class="client-logo-placeholder">Logo à fournir</div>
+        <div class="client-name">Electricité de Tahiti</div>
+        <span class="client-sector">Énergie</span>
+      </div>
+
+      <div class="client-card" data-sector="collectivites">
+        <div class="client-logo-placeholder">Logo à fournir</div>
+        <div class="client-name">Mairie Nogent-sur-Marne</div>
+        <span class="client-sector">Collectivités</span>
+      </div>
+
+      <div class="client-card" data-sector="collectivites">
+        <div class="client-logo-placeholder">Logo à fournir</div>
+        <div class="client-name">Mairie Saint-Mandé</div>
+        <span class="client-sector">Collectivités</span>
+      </div>
+
+      <div class="client-card" data-sector="services">
+        <div class="client-logo-placeholder">Logo à fournir</div>
+        <div class="client-name">Comexposium</div>
+        <span class="client-sector">Services</span>
+      </div>
+
+      <div class="client-card" data-sector="services">
+        <div class="client-logo-placeholder">Logo à fournir</div>
+        <div class="client-name">Groupe Interac</div>
+        <span class="client-sector">Services</span>
+      </div>
+
+      <div class="client-card" data-sector="industrie">
+        <div class="client-logo-placeholder">Logo à fournir</div>
+        <div class="client-name">Sateba</div>
+        <span class="client-sector">Industrie</span>
+      </div>
+
+      <div class="client-card" data-sector="services">
+        <div class="client-logo-placeholder">Logo à fournir</div>
+        <div class="client-name">Ileo</div>
+        <span class="client-sector">Services</span>
+      </div>
+
+      <div class="client-card" data-sector="services">
+        <div class="client-logo-placeholder">Logo à fournir</div>
+        <div class="client-name">Keolis</div>
+        <span class="client-sector">Services</span>
+      </div>
+
+      <div class="client-card" data-sector="services">
+        <div class="client-logo-placeholder">Logo à fournir</div>
+        <div class="client-name">Madame Dessert</div>
+        <span class="client-sector">Services</span>
+      </div>
+
+      <div class="client-card" data-sector="services">
+        <div class="client-logo-placeholder">Logo à fournir</div>
+        <div class="client-name">Groupe Pomona</div>
+        <span class="client-sector">Services</span>
+      </div>
+
+      <div class="client-card" data-sector="services">
+        <div class="client-logo-placeholder">Logo à fournir</div>
+        <div class="client-name">SFR</div>
+        <span class="client-sector">Services</span>
+      </div>
+
+      <div class="client-card" data-sector="energie">
+        <div class="client-logo-placeholder">Logo à fournir</div>
+        <div class="client-name">Tractebel</div>
+        <span class="client-sector">Énergie</span>
+      </div>
+
+      <div class="client-card" data-sector="energie">
+        <div class="client-logo-placeholder">Logo à fournir</div>
+        <div class="client-name">SNPC</div>
+        <span class="client-sector">Énergie</span>
+      </div>
+
+      <div class="client-card" data-sector="energie">
+        <div class="client-logo-placeholder">Logo à fournir</div>
+        <div class="client-name">Qair</div>
+        <span class="client-sector">Énergie</span>
+      </div>
+
+      <div class="client-card" data-sector="industrie">
+        <div class="client-logo-placeholder">Logo à fournir</div>
+        <div class="client-name">Gieps</div>
+        <span class="client-sector">Industrie</span>
+      </div>
+
+      <div class="client-card" data-sector="services">
+        <div class="client-logo-placeholder">Logo à fournir</div>
+        <div class="client-name">Finegan</div>
+        <span class="client-sector">Services</span>
+      </div>
+
+      <div class="client-card" data-sector="sante">
+        <div class="client-logo-placeholder">Logo à fournir</div>
+        <div class="client-name">Hôpital Franco-Britannique</div>
+        <span class="client-sector">Santé</span>
+      </div>
+
+      <div class="client-card" data-sector="sante">
+        <div class="client-logo-placeholder">Logo à fournir</div>
+        <div class="client-name">GHT Saône et Loire Bresse Morvan</div>
+        <span class="client-sector">Santé</span>
+      </div>
+
+      <div class="client-card" data-sector="industrie">
+        <div class="client-logo-placeholder">Logo à fournir</div>
+        <div class="client-name">Aperam</div>
+        <span class="client-sector">Industrie</span>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <h2>Vous rejoindrez nos références ?</h2>
+    <p>Parlons de votre projet. Nous répondons sous 48h ouvrées.</p>
+    <div class="cta-btns">
+      <a href="index.html#contact" class="btn-white">Nous contacter</a>
+      <a href="offre.html" class="btn-outline-white">Voir notre offre</a>
+    </div>
+  </section>
+
+  <footer class="footer" id="contact">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">JDO <em>Consulting</em></div>
+        <p class="footer-tagline">Conseil en transformation digitale,<br>cybersécurité et conformité RGPD.</p>
+      </div>
+      <div>
+        <p class="footer-col-title">Contact</p>
+        <div class="footer-item"><i class="ti ti-mail" aria-hidden="true"></i><span>contact@jdoconsulting.fr</span></div>
+        <div class="footer-item"><i class="ti ti-phone" aria-hidden="true"></i><span>06 37 70 43 42</span></div>
+        <div class="footer-item"><i class="ti ti-map-pin" aria-hidden="true"></i><span>5 Rue Pleyel<br>93200 Saint-Denis, France</span></div>
+      </div>
+      <div>
+        <p class="footer-col-title">Navigation</p>
+        <a href="index.html" class="footer-link">Accueil</a>
+        <a href="identite.html" class="footer-link">Notre identité</a>
+        <a href="offre.html" class="footer-link">Notre offre</a>
+        <a href="clients.html" class="footer-link">Nos partenaires</a>
+      </div>
+      <div>
+        <p class="footer-col-title">Légal</p>
+        <a href="#" class="footer-link">Mentions légales</a>
+        <a href="#" class="footer-link">Politique de confidentialité</a>
+        <a href="#" class="footer-link">RGPD</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 JDO Consulting</span>
+      <span>5 Rue Pleyel, 93200 Saint-Denis</span>
+    </div>
+  </footer>
+
+  <script>
+    const pills = document.querySelectorAll('.filter-pill');
+    const cards = document.querySelectorAll('.client-card');
+    const countEl = document.getElementById('visibleCount');
+
+    pills.forEach(pill => {
+      pill.addEventListener('click', () => {
+        pills.forEach(p => p.classList.remove('active'));
+        pill.classList.add('active');
+        const filter = pill.dataset.filter;
+        let visible = 0;
+        cards.forEach(card => {
+          if (filter === 'all' || card.dataset.sector === filter) {
+            card.classList.remove('hidden');
+            visible++;
+          } else {
+            card.classList.add('hidden');
+          }
+        });
+        countEl.textContent = visible;
+      });
+    });
+  </script>
+
+</body>
+</html>
